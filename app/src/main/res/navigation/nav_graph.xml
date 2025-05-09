@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/locationFragment">
+
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.example.teleweather.fragmentos.LocationFragment"
+        android:label="fragment_location"
+        tools:layout="@layout/fragment_location">
+
+        <!--Promp: una pregunta, de pronóstico no puedo volver a Location en el menú inferior cuando ya están los resultados de una locación-->
+        <!---arreglo de código: -->
+        <action
+            android:id="@+id/action_locationFragment_to_pronosticoFragment"
+            app:destination="@id/pronosticoFragment"
+            app:popUpTo="@id/locationFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/pronosticoFragment"
+        android:name="com.example.teleweather.fragmentos.PronosticoFragment"
+        android:label="Pronóstico">
+
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/deportesFragment"
+        android:name="com.example.teleweather.fragmentos.DeportesFragment"
+        android:label="fragment_deportes"
+        tools:layout="@layout/fragment_deportes" />
+</navigation>

@@ -32,8 +32,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-/* para la parte de sensores: */
-/* promt: en el uso de sensores, como puedo realizar la detección del "shake" del dispositivo?, la comparación con el umbral (20 m/s^2) */
+/* para la parte de sensores/
+/* promt: en el uso de sensores, como puedo realizar la detección del "shake" del dispositivo para limpiar los pronósticos?, la comparación con el umbral (20 m/s^2) */
 /* Respuesta: apartado (a), (b), (c)*/
 public class PronosticoFragment extends Fragment implements SensorEventListener {
 
